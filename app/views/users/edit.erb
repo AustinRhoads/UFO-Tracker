@@ -1,0 +1,25 @@
+<h1>Update My Profile</h1>
+
+<form action = "/users/<%= @user.slug %>" method = "POST">
+
+<input type = "hidden" id = "hidden" name = "_method" value = "patch">
+
+<label>Name:</label>
+<input type = "text" name = "username" value = "<%= @user.username %>"><br>
+<label>Email:</label>
+<input type = "text" name = "email" value = "<%= @user.email %>"><br>
+<label>Password:</label>
+<input type = "password" name = "password" value = "<%= @user.password %>"><br>
+<label>Are you a member of the military?</label><br>
+<input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
+<input type = "radio" name = "is_military" value = "false"><label>no</label></input>
+
+<br>
+<label>Are you a member of law inforcment?</label>
+<br>
+<input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
+<input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
+<br>
+<input type = "submit" value = "Update Profile">
+
+</form>

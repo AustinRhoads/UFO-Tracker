@@ -1,0 +1,3 @@
+class EncountersController < ApplicationController
+
+end

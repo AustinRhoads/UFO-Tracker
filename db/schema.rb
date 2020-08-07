@@ -10,12 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 3) do
+
+  create_table "encounters", force: :cascade do |t|
+    t.integer "kind"
+    t.string "date"
+    t.string "time"
+    t.integer "user_id"
+    t.string "description"
+    t.boolean "men_in_black", default: false
+    t.boolean "military_involved", default: false
+    t.integer "mass_encounter_id"
+  end
+
+  create_table "mass_encounters", force: :cascade do |t|
+    t.string "name"
+    t.string "general_description"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
     t.string "password_digest"
+    t.boolean "is_military", default: false
+    t.boolean "is_law_enforcement", default: false
   end
 
 end

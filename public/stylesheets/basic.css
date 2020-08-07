@@ -1,0 +1,45 @@
+
+
+*:not(#user-info){
+    background-color: #caac57;
+   /* font-family: dark-and-black, Arial, Helvetica, sans-serif;*/
+}
+
+@font-face {
+    font-family: 'dark-and-black';
+    src: url('/fonts/darkandblack.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'lekton';
+    src: url('/fonts/Lekton-Regular.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'lekton';
+    src: url('/fonts/Lekton-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'lekton';
+    src: url('/fonts/Lekton-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(10, 65, 114);
+    font-family: 'dark-and-black';
+   
+   /* color: rgb(129, 173, 211)*/
+}
+
+.layout{
+    font-family: 'dark-and-black';
+}
+
+header, footer{
+    display: inline-block;
+   
+}
+
