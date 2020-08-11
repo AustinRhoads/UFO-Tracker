@@ -1,3 +1,0 @@
-class MassEncountersController < ApplicationController
-
-end

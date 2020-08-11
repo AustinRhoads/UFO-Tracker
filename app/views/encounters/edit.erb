@@ -1,0 +1,47 @@
+<h1 class = "layout">Edit Encounter</h1>
+<form class = "layout" action = "/encounters/<%= @encounter.id %>" method = "POST">
+
+<input type = "hidden" id = "hidden" name = "_method" value = "PATCH" >
+
+<div class = "form-input">
+<label>Encounter Name: </label>
+<input  type ="text" name = "name" value = "<%= @encounter.name %>">
+</div>
+<br>
+<div class = "form-input">
+<label>Date: </label>
+<input  type = "text" name = "date" value = "<%= @encounter.date %>">
+</div>
+<br>
+<div class = "form-input">
+<label>Description: </label>
+<input class = "form-input" type = "text" name = "description" value = "<%= @encounter.description %>">
+</div>
+<br>
+
+<label>Was the Military Involved?</label>
+<br>
+<input type = "radio" name = "military_involved" value = "true" <%= 'checked' if @encounter.military_involved == true %>>Yes</input><br>
+<input type = "radio" name = "military_involved" value = "false" <%= 'checked' if @encounter.military_involved == false %>>No</input><br>
+
+<label>Was Law Enforcement Involved?</label>
+<br>
+<input type = "radio" name = "law_enforcement_involved" value = "true" <%= 'checked' if @encounter.law_enforcement_involved == true %>>Yes</input><br>
+<input type = "radio" name = "law_enforcement_involved" value = "false" <%= 'checked' if @encounter.law_enforcement_involved == false %>>No</input><br>
+
+<label>Did this happen to you??</label>
+<br>
+<input type = "radio" name = "happen_to_user" value = "true" <%= 'checked' if @encounter.happen_to_user == true %>>Yes</input><br>
+<input type = "radio" name = "happen_to_user" value = "false" <%= 'checked' if @encounter.happen_to_user == false %>>No</input><br>
+
+<label>This as a Close Encounter of the...</label><br>
+<input type ="radio" name = "kind" value = "1" <%= 'checked' if @encounter.kind == 1 %>>First Kind<p>Visual sightings of an unidentified flying object, seemingly less than 500 feet (150 m) away, that show an appreciable angular extension and considerable detail</p></input><br>
+<input type ="radio" name = "kind" value = "2" <%= 'checked' if @encounter.kind == 2 %>>Second Kind<p>A UFO event in which a physical effect is alleged; this can be interference in the functioning of a vehicle or electronic device, animals reacting, a physiological effect such as paralysis or heat and discomfort in the witness, or some physical trace like impressions in the ground, scorched or otherwise affected vegetation, or a chemical trace[</p></input><br>
+<input type ="radio" name = "kind" value = "3" <%= 'checked' if @encounter.kind == 3 %>>Third Kind<p>UFO encounters in which an animated entity is present—these include humanoids, robots, and humans who seem to be occupants or pilots of a UFO</p></input><br>
+<input type ="radio" name = "kind" value = "4" <%= 'checked' if @encounter.kind == 4 %>>Fourth Kind<p>A Close Encounter of the Fourth Kind is a UFO event in which a human is abducted by a UFO or its occupants.</p></input><br>
+<input type ="radio" name = "kind" value = "5" <%= 'checked' if @encounter.kind == 5 %>>Fifth Kind<p>A Close Encounter of the Fifth Kind is a UFO event that involves direct communication between aliens and humans.</p></input><br>
+<input type ="radio" name = "kind" value = "6" <%= 'checked' if @encounter.kind == 6 %>>Sixth Kind<p>Death of a human or animal associated with a UFO sighting (though this could be considered a more severe example of a second-kind encounter)[</p></input><br>
+<input type ="radio" name = "kind" value = "7" <%= 'checked' if @encounter.kind == 7 %>>Seventh Kind<p>The creation of a human/alien hybrid, either by sexual reproduction or by artificial scientific methods</p></input><br>
+
+<input class = "form-input" type = "Submit" value = "SUBMIT">
+</form>

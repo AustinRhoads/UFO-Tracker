@@ -1,7 +1,7 @@
 require './config/environment'
 
 use Rack::MethodOverride
-use MassEncountersController
+use CaseFilesController
 use EncountersController
 use UsersController
 run ApplicationController

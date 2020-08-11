@@ -1,9 +1,17 @@
-<head>
 
-</head>
-<a href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
-<div id ="user-info">
-<h1><%= @user.username %></h1>
-<h1><%= @user.email %></h1>
+<% if @user == current_user %>
+    <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
+<% end %>
+
+<div class = "layout" >
+
+<h1><%= @user.username %></h1> 
+<h3><%= @user.encounters.count %> cases</h3>
 </div>
-<h1>User show page</h1>
+
+
+<% @user.encounters.each do |encounter| %>
+<h2><a href = "/encounters/<%= encounter.id %>"><%= encounter.name %></a></h2>
+<p><%= encounter.description %></p>
+
+<% end %>

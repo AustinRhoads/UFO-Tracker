@@ -1,6 +1,6 @@
 class Encounter < ActiveRecord::Base
     belongs_to :user
-    belongs_to :mass_encounter
+    belongs_to :case_file
     
     
 end

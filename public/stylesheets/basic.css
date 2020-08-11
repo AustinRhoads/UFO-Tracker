@@ -26,20 +26,62 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'jmh-typewriter';
+    src: url('/fonts/JMH-Typewriter.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'jmh-typewriter';
+    src: url('/fonts/JMH-Typewriter-Black.ttf') format('truetype');
+    font-style: black;
+}
+
+@font-face {
+    font-family: 'jmh-typewriter';
+    src: url('/fonts/JMH-Typewriter-Bold.ttf') format('truetype');
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'jmh-typewriter';
+    src: url('/fonts/JMH-Typewriter-Thin.ttf') format('truetype');
+    font-style: thin;
+}
+
+@font-face {
+    font-family: 'alte-caps';
+    src: url('/fonts/Alte-Caps.ttf') format('truetype');
+   
+}
+
+
 a{
     text-decoration: none;
     color: rgb(10, 65, 114);
-    font-family: 'dark-and-black';
+    font-family: 'jmh-typewriter';
    
    /* color: rgb(129, 173, 211)*/
 }
 
 .layout{
-    font-family: 'dark-and-black';
+    font-family: 'jmh-typewriter';
+   
 }
 
 header, footer{
     display: inline-block;
    
 }
+
+.form-input{
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
 

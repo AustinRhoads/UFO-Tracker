@@ -1,0 +1,8 @@
+<% @case_files.each do |case| %>
+    <div class = "layout">
+        <h1><%= case.name %></h1>
+        <span><%= case.date %></span>
+        <span><%= case.location %> <%= case.country %></span>
+        <p><%= case.description %></p>
+    </div>
+<% end %>
