@@ -1,13 +1,25 @@
-<h1>Create New User</h1>
+<h1 class = "layout">Create New User</h1>
 
-<form action = "/signup" method = "POST">
+<form class = "layout" action = "/signup" method = "POST">
 
+<% if flash.has?(:message_0) %>
+    <%= flash[:message_0] %>
+<% end %>
+
+<br>
 <label>Name:</label>
 <input type = "text" name = "username" ><br>
+<% if flash.has?(:message_1) %>
+    <%= flash[:message_1] %>
+<% end %>
+<br>
 <label>Email:</label>
-<input type = "text" name = "email" ><br>
+<input type = "text" name = "email" >
+<br>
+<br>
+
 <label>Password:</label>
-<input type = "password" name = "password"><br>
+<input type = "password" name = "password"><br><br>
 <label>Are you a member of the military?</label><br>
 <input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
 <input type = "radio" name = "is_military" value = "false"><label>no</label></input>
@@ -15,8 +27,8 @@
 <br>
 <label>Are you a member of law inforcment?</label>
 <br>
-<input type = "radio" name = "is_law_inforcement" value = "true"><label>yes</label></input>
-<input type = "radio" name = "is_law_inforcement" value = "false"><label>no</label></input>
+<input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
+<input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
 <br>
 <input type = "submit" value = "Sign Up">
 

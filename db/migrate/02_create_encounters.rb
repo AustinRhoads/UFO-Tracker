@@ -6,6 +6,8 @@ class CreateEncounters < ActiveRecord::Migration[6.0]
         t.string :time
         t.string :location
         t.string :country
+        t.integer :latitude
+        t.integer :longitude
         t.integer :user_id
         t.integer :kind
         t.string :other_kind

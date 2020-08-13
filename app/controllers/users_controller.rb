@@ -1,4 +1,11 @@
+require 'rack-flash'
+
 class UsersController < ApplicationController
+
+    enable :sessions
+    use Rack::Flash
+
+    
 
     get '/users' do 
         erb :'users/index'
@@ -14,13 +21,22 @@ class UsersController < ApplicationController
 
     post '/signup' do 
         #binding.pry
-      @user = User.new(params)
-        if @user.save
-            session[:user_id] = @user.id
-            redirect "/users"
-        else
-            redirect '/signup'
-        end
+        
+        @user = User.new(params)
+          if @user.save
+            
+              session[:user_id] = @user.id
+              redirect "/users/#{@user.slug}"
+          else
+
+           messages = validate_signup(params)
+
+           messages.each_with_index do |mes, i|
+            flash[:"message_#{i}"] = mes
+           end
+
+              redirect '/signup'
+          end
     end
 
     get '/login' do
@@ -67,6 +83,20 @@ class UsersController < ApplicationController
         @user.update(:username => params[:username], :email => params[:email], :password => params[:password], :is_military => params[:is_military], :is_law_enforcement => params[:is_law_enforcement])
         @user.save
         redirect "/users/#{@user.slug}"
+      end
+
+      def validate_signup(params)
+        messages = []
+
+        params.each do |key, value|
+            next if key == "password"
+           
+            finder = User.find_by("#{key}" => value)
+            if finder
+                messages << "the #{key} #{value} is already in use."
+            end
+        end
+        messages
       end
   
 

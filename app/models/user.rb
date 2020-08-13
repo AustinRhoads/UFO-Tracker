@@ -4,9 +4,14 @@ class User < ActiveRecord::Base
     include Slugifiable::InstanceMethods
     has_secure_password
     has_many :encounters
-    #has_many :mass_users
+    
     has_many :case_files, through: :encounters
+
+
     validates_presence_of :username, :email, :password
+    validates_uniqueness_of :username, :email
+
+
     scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase).first }
 
     

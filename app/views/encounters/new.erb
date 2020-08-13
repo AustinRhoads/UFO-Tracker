@@ -1,19 +1,38 @@
 
 <h1 class = "layout">Report An Encounter</h1>
 <form class = "layout" action = "/encounters" method = "POST">
-<div class = "form-input">
+<div >
 <label>Encounter Name: </label>
 <input  type ="text" name = "name" >
 </div>
 <br>
-<div class = "form-input">
+<div >
 <label>Date: </label>
 <input  type = "text" name = "date">
 </div>
 <br>
-<div class = "form-input">
+
+<div class = "container">
+
+<!-- Autocomplete location search input --> 
+<div class="form-group">
+    <label>Location:</label>
+    <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
+    <input type="hidden" id="loc_lat" />
+    <input type="hidden" id="loc_long" />
+</div>
+
+<!-- Display latitude and longitude -->
+<div class="latlong-view">
+    <p><b>Latitude:</b> <span id="latitude_view"></span></p><input type = "text" id ='latitude_input'>
+    <p><b>Longitude:</b> <span id="longitude_view"></span></p><input type = "text" id ='longitude_input'>
+</div>
+    
+</div>
+
+<div >
 <label>Description: </label>
-<input class = "form-input" type = "text" name = "description">
+<input  type = "text" name = "description">
 </div>
 <br>
 
@@ -41,5 +60,5 @@
 <input type ="radio" name = "kind">Sixth Kind<p>Death of a human or animal associated with a UFO sighting (though this could be considered a more severe example of a second-kind encounter)[</p></input><br>
 <input type ="radio" name = "kind">Seventh Kind<p>The creation of a human/alien hybrid, either by sexual reproduction or by artificial scientific methods</p></input><br>
 
-<input class = "form-input" type = "Submit" value = "SUBMIT">
+<input type = "Submit" value = "SUBMIT">
 </form>
