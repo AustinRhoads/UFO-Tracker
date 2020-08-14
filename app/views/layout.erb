@@ -27,15 +27,18 @@ $(document).ready(function () {
 		
         document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
         document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+
+      
     });
 });
 
 $(document).on('change', '#'+searchInput, function () {
-    document.getElementById('latitude_input').value = '';
-    document.getElementById('longitude_input').value = '';
+    
+   <% # document.getElementById('latitude_input').value = '';
+      # document.getElementById('longitude_input').value = ''; %>
 	
     document.getElementById('latitude_view').innerHTML = '';
-    document.getElementById('longitude_view').innerHTML = '';
+    document.getElementById('longitude_view').innerHTML = ''; 
 });
 </script>
 
@@ -67,14 +70,7 @@ $(document).on('change', '#'+searchInput, function () {
 
 </header>
 
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
+
 
 
 

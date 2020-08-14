@@ -16,6 +16,7 @@ class EncountersController < ApplicationController
     end
 
     post '/encounters' do
+        binding.pry
         proc = Proc.new {
 
         @encounter = Encounter.new(params)

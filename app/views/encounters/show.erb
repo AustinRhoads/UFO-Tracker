@@ -1,6 +1,10 @@
 <h1 class = "layout"><%= @encounter.name %></h1>
 
+<h3>Lat: <%= @encounter.latitude %></h3>
+<h3>Long: <%= @encounter.longitude %></h3>
+
 <h3>posted by <a href = '/users/<%= @encounter.user.slug %>'><%= @encounter.user.username %></a> </h3>
+
 <p><%= @encounter.description %></p>
 <% if @user == current_user %>
 

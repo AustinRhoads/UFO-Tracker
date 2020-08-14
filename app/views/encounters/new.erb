@@ -17,15 +17,17 @@
 <!-- Autocomplete location search input --> 
 <div class="form-group">
     <label>Location:</label>
-    <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
-    <input type="hidden" id="loc_lat" />
-    <input type="hidden" id="loc_long" />
+    <input type="text" class="form-control" id="search_input" name = "location" placeholder="Type address..." />
+    <input type="hidden" name = "latitude" id="loc_lat" />
+    <input type="hidden" name = "longitude" id="loc_long" />
 </div>
 
 <!-- Display latitude and longitude -->
 <div class="latlong-view">
-    <p><b>Latitude:</b> <span id="latitude_view"></span></p><input type = "text" id ='latitude_input'>
-    <p><b>Longitude:</b> <span id="longitude_view"></span></p><input type = "text" id ='longitude_input'>
+    <p><b>Latitude:</b> <span id="latitude_view" ></span></p>        <!-- <input type = "text" id ='latitude_input'>  -->
+  
+
+    <p><b>Longitude:</b> <span id="longitude_view" ></span></p>                         <!-- <input type = "text" id ='longitude_input'> -->
 </div>
     
 </div>
