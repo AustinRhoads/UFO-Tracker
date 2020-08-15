@@ -53,7 +53,7 @@ class UsersController < ApplicationController
          user = User.find_by(:username => params[:username])
          if !!(user && user.authenticate(params[:password]))
              session[:user_id] = user.id
-             redirect "/"
+             redirect "/users/#{user.slug}"
          else
              redirect "/login"
          end
@@ -93,7 +93,7 @@ class UsersController < ApplicationController
            
             finder = User.find_by("#{key}" => value)
             if finder
-                messages << "the #{key} #{value} is already in use."
+                messages << "The #{key} #{value} is already in use."
             end
         end
         messages

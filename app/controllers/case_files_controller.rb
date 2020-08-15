@@ -16,7 +16,8 @@ class CaseFilesController < ApplicationController
 
     post '/case_files' do 
         @case_file = CaseFile.new(params)
-
+        @user = current_user
+        @case_file.created_by = @user
         redirect "/case_files/#{@case_file.id}"
 
     end

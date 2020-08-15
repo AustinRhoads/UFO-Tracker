@@ -1,9 +1,6 @@
 
 
-*:not(#user-info){
-    background-color: #caac57;
-   /* font-family: dark-and-black, Arial, Helvetica, sans-serif;*/
-}
+
 
 @font-face {
     font-family: 'dark-and-black';
@@ -59,6 +56,7 @@
 
 a{
     text-decoration: none;
+   /* color: #330b00; */
     color: rgb(10, 65, 114);
     font-family: 'jmh-typewriter';
    
@@ -67,6 +65,9 @@ a{
 
 .layout{
     font-family: 'jmh-typewriter';
+    color: #330b00;
+    /*color: #3e1801;*/
+    background-color: #f11;
    
 }
 
@@ -75,9 +76,7 @@ header, footer{
    
 }
 
-.error_message{
-    color: chartreuse;
-}
+
 
 #map {
     height: 400px;  /* The height is 400 pixels */
@@ -125,3 +124,16 @@ header .dropbtn {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .user-input{
+      color: #1b0000;
+  }
+
+  #error {
+      color: #c03015;
+      font-weight: bold;
+  }
+
+  .input-box{
+   
+  }

@@ -1,17 +1,23 @@
 <h1 class = "layout">Create New User</h1>
 
 <form class = "layout" action = "/signup" method = "POST">
-
+<div id = "error">
 <% if flash.has?(:message_0) %>
     <%= flash[:message_0] %>
 <% end %>
+</div>
 
 <br>
-<label>Name:</label>
-<input type = "text" name = "username" ><br>
+
+<label class = "input-box">Name:</label>
+<input type = "text" name = "username" >
+<br>
+
+<div id = "error">
 <% if flash.has?(:message_1) %>
     <%= flash[:message_1] %>
 <% end %>
+</div>
 <br>
 <label>Email:</label>
 <input type = "text" name = "email" >

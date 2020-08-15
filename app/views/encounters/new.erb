@@ -1,5 +1,59 @@
+<head>
+
+<script src="jquery-3.5.1.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var searchInput = 'search_input';
+
+$(document).ready(function () {
+    var autocomplete;
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        types: ['geocode'],
+    });
+	
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var near_place = autocomplete.getPlace();
+        document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+        document.getElementById('loc_long').value = near_place.geometry.location.lng();
+		
+        document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+        document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+
+      
+    });
+});
+
+$(document).on('change', '#'+searchInput, function () {
+    
+   <% # document.getElementById('latitude_input').value = '';
+      # document.getElementById('longitude_input').value = ''; %>
+	
+    document.getElementById('latitude_view').innerHTML = '';
+    document.getElementById('longitude_view').innerHTML = ''; 
+});
+</script>
+</head>
+
+
+
+
 
 <h1 class = "layout">Report An Encounter</h1>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBymQk6keNx_H7Pk1awWHv6M4UUt_9waGY"></script>
+
+
+
+
+
+
+
 <form class = "layout" action = "/encounters" method = "POST">
 <div >
 <label>Encounter Name: </label>

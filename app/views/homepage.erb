@@ -1,9 +1,7 @@
 <div class = "layout">
    
-<% if logged_in? %>
-<a href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a>
-<a href = '/logout'>Log Out</a>
-<% else %>
+<% if !logged_in? %>
+
 <h1>Welcome to the UFO Tracker</h1>
 <p> <a href = '/login'>Log In</a> or 
 <a href = '/signup'>Sign Up</a> to explore or report UFO sightings.</p>

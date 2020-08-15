@@ -1,33 +1,41 @@
-<style>
-/* Set the size of the div element that contains the map */
-#map {
-  height: 400px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
- }
-</style>
-</head>
-<body>
-<h3>My Google Maps Demo</h3>
-<!--The div element for the map -->
-<div id="map"></div>
-<script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
 // Initialize and add the map
 function initMap() {
-// The location of Uluru
-var uluru = {lat: -25.344, lng: 131.036};
-// The map, centered at Uluru
-var map = new google.maps.Map(
-document.getElementById('map'), {zoom: 4, center: uluru});
-// The marker, positioned at Uluru
-var marker = new google.maps.Marker({position: uluru, map: map});
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
 }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBymQk6keNx_H7Pk1awWHv6M4UUt_9waGY&callback=initMap"
-type="text/javascript"></script>
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBymQk6keNx_H7Pk1awWHv6M4UUt_9waGY&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
 
 <% @encounters.each do |e| %>
     <div class = "layout">
-        <h1><%= e.name %></h1>
+        <a href = "/encounters/<%= e.id %>"><h1><%= e.name %></h1></a>
         <h3>posted by <a href = '/users/<%= e.user.slug %>'><%= e.user.username %></a> </h3>
         <span><%= e.date %></span>
         <span><%= e.location %> </span>

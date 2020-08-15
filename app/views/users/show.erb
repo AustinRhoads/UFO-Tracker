@@ -1,7 +1,4 @@
 
-<% if @user == current_user %>
-    <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
-<% end %>
 
 <div class = "layout" >
 
@@ -15,5 +12,5 @@
 <% @user.encounters.each do |encounter| %>
 <h2><a href = "/encounters/<%= encounter.id %>"><%= encounter.name %></a></h2>
 <p><%= encounter.description %></p>
-
+<a href = "/encounters/<%= encounter.id %>/edit"><p>Edit</p></a>
 <% end %>
