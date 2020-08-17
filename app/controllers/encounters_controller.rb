@@ -3,6 +3,10 @@ class EncountersController < ApplicationController
     get "/encounters" do
         proc = Proc.new {
         @encounters = Encounter.all
+        @encounters_lat_long = []
+        @encounters.each do |e|
+            @encounters_lat_long << {lat: e.latitude, lng: e.longitude}
+        end
         erb :'encounters/index'
     }
     redirect_if_not_logged_in(proc)
@@ -80,3 +84,4 @@ class EncountersController < ApplicationController
 
 
 end
+

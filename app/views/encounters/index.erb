@@ -17,17 +17,26 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
+var arr = <%= @encounters_lat_long.to_json %>
 
+var usa = {lat: 37.09024, lng: -95.712891}
+// The map, centered at usa
+var map = new google.maps.Map(
+    document.getElementById('map'), {zoom: 4, center: usa});
+
+for(let x = 0; x < arr.length; x++){
+  console.log(arr[x]);
+  var point = arr[x];
+  var marker = new google.maps.Marker({position: point, map: map});
+}
+
+       
+  var uluru = {lat: <%= Encounter.find_by(:name => "1947 UFO sightings").latitude.to_json %>, lng: <%= Encounter.find_by(:name => "1947 UFO sightings").longitude.to_json %>};
  
-
-
-  var uluru = {lat: <%= Encounter.find_by(:name => "the 2020 flying ass monster attack").latitude.to_json %>, lng: <%= Encounter.find_by(:name => "the 2020 flying ass monster attack").longitude.to_json %>};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
+
 
 
     </script>
