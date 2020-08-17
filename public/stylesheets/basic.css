@@ -1,6 +1,18 @@
 
+*:not(user-input){
+   
+}
+body{
+    background-color: #f3d494;
+}
 
-
+.layout{
+    font-family: 'jmh-typewriter';
+    color: #330b00;
+    /*color: #3e1801;*/
+    background-color: #f3d494;
+   
+}
 
 @font-face {
     font-family: 'dark-and-black';
@@ -58,18 +70,13 @@ a{
     text-decoration: none;
    /* color: #330b00; */
     color: rgb(10, 65, 114);
+    
     font-family: 'jmh-typewriter';
    
    /* color: rgb(129, 173, 211)*/
 }
 
-.layout{
-    font-family: 'jmh-typewriter';
-    color: #330b00;
-    /*color: #3e1801;*/
-    background-color: #f11;
-   
-}
+
 
 header, footer{
     display: inline-block;
