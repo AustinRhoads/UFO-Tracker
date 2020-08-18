@@ -17,14 +17,14 @@
 
 
 <div class="dropdown">
-  <button class="dropbtn"><a  href = '/'><h1>UFO Tracker</h1></a></button>
+  <button id = "blank_box" class="dropbtn"><a  href = '/'><h1>UFO Tracker</h1></a></button>
   <div class="dropdown-content">
   <% if logged_in? %>
-  <a href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a>
-  <a href = "/encounters/new">Report A UFO</a>
-  <a href = '/encounters'>Explore UFO Encounters</a>
-  <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
-  <a href = '/logout'>Log Out</a>
+  <a id = "blank_box" href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a>
+  <a id = "blank_box" href = "/encounters/new">Report A UFO</a>
+  <a id = "blank_box" href = '/encounters'>Explore UFO Encounters</a>
+  <a id = "blank_box" href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
+  <a id = "blank_box" href = '/logout'>Log Out</a>
 <% else %>
 
   <a href = '/login'>Log In</a>

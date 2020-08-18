@@ -2,15 +2,18 @@
 <html>
   <head>
     <style>
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
+   
     </style>
   </head>
-  <body>
-    <h3>My Google Maps Demo</h3>
+  <body class = "encounters_index_body">
+
+    <div>
+      <image class = "top_image" src = '/images/the_night_sky_1.jpg'>
+
+    </div>
+
+  <div class = "map_container">
+    <h3>UFO Vision</h3>
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
@@ -43,6 +46,7 @@ for(let x = 0; x < arr.length; x++){
     <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBymQk6keNx_H7Pk1awWHv6M4UUt_9waGY&callback=initMap">
     </script>
+    </div>
   </body>
 </html>
 
