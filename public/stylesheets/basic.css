@@ -73,7 +73,8 @@ main{
 a{
     text-decoration: none;
    /* color: #330b00; */
-    color: rgb(10, 65, 114);
+   /* color: rgb(10, 65, 114);*/
+    color: #ff9d5f;
     
     font-family: 'jmh-typewriter';
    
@@ -91,7 +92,8 @@ header, footer{
 
 #map {
     height: 400px;  /* The height is 400 pixels */
-    width: 100%;  /* The width is the width of the web page */
+    width: 61.8%;  /* The width is the width of the web page */
+    margin: auto;
    
    }
 
@@ -146,7 +148,7 @@ transform: translateX(6px);
 .derp{
     background-color: #333;
     width: 100%;
-    opacity: 88%;
+    opacity: 93%;
     position: fixed;
 }
 
@@ -214,11 +216,7 @@ transform: translateX(6px);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-@media and screen(max: 600px;){
-  .dropdown-content {
-    max-width: 160px;
-  }
-}
+
   
   /* Style the links inside the dropdown */
   .dropdown-content a {
@@ -253,7 +251,7 @@ transform: translateX(6px);
 }
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 711px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
@@ -264,7 +262,7 @@ transform: translateX(6px);
   }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 711px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -293,6 +291,9 @@ transform: translateX(6px);
 
 
 .e_page{
+  width: 61.8%;
+  height: auto;
+  margin: auto;
     color: #f2f2f2;
     background-color: #333;
     opacity: 88%;
@@ -317,4 +318,14 @@ h1{
     padding-right: 45px;
     height: 45px;
     width: auto;
+}
+
+
+@media screen and (max-width: 773px){
+.homepage_image{
+width: 61.8%;
+height: auto;
+margin-left: 19%;
+
+}
 }

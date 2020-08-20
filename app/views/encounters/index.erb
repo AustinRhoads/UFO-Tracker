@@ -30,14 +30,14 @@
 
 
 
-  <div class="parallax" style = "height: 270px;"></div>
+  <div class="parallax" style = "height: 135px;"></div>
 
-<div class = "transparent" ><h1>Welcome to the UFO Tracker</h1></div>
-<image class = "homepage_image parallax" src = "/images/ufo_banner_official.png" >
+
+<div class = "parallax"><image class = "homepage_image" src = "/images/ufo_banner_official.png" ></div>
   <div class="parallax" style = "height: 270px;"></div>
     
 
-  <div class = "map_container">
+  <div class = "map_container parallax">
     
     <!--The div element for the map -->
     <div id="map"></div>
@@ -80,6 +80,8 @@ for(let x = 0; x < arr.length; x++){
 
 <div class="parallax" style = "height: 99px;"></div>
 
+
+<div class = "parallax">
 <% @encounters.each do |e| %>
     <div class = "layout e_page" >
         <a href = "/encounters/<%= e.id %>"><h1><%= e.name %></h1></a>
@@ -90,3 +92,4 @@ for(let x = 0; x < arr.length; x++){
         <div class="parallax" style = "height: 99px;"></div>
     </div>
 <% end %>
+</div>
