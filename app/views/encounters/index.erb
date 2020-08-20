@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
    
-    </style>
+
+  <style>
+  body, html {
+    height: 100%;
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url('/images/nasa_galaxy_cluster.jpg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  </style>
   </head>
   <body class = "encounters_index_body">
 
-    <div>
-      <image class = "top_image" src = '/images/the_night_sky_1.jpg'>
 
-    </div>
+
+
+
+
+  <div class="parallax" style = "height: 270px;"></div>
+
+<div class = "transparent" ><h1>Welcome to the UFO Tracker</h1></div>
+<image class = "homepage_image parallax" src = "/images/ufo_banner_official.png" >
+  <div class="parallax" style = "height: 270px;"></div>
+    
 
   <div class = "map_container">
-    <h3>UFO Vision</h3>
+    
     <!--The div element for the map -->
     <div id="map"></div>
+    
+
+
+
     <script>
 // Initialize and add the map
 function initMap() {
-  // The location of Uluru
+
+  // All encounter lat and long
 var arr = <%= @encounters_lat_long.to_json %>
 
-var usa = {lat: 37.09024, lng: -95.712891}
+
 // The map, centered at usa
+var usa = {lat: 37.09024, lng: -95.712891}
+
 var map = new google.maps.Map(
     document.getElementById('map'), {zoom: 4, center: usa});
 
@@ -34,10 +66,6 @@ for(let x = 0; x < arr.length; x++){
 }
 
        
-  var uluru = {lat: <%= Encounter.find_by(:name => "1947 UFO sightings").latitude.to_json %>, lng: <%= Encounter.find_by(:name => "1947 UFO sightings").longitude.to_json %>};
- 
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
 }
 
 
@@ -50,14 +78,15 @@ for(let x = 0; x < arr.length; x++){
   </body>
 </html>
 
-
+<div class="parallax" style = "height: 99px;"></div>
 
 <% @encounters.each do |e| %>
-    <div class = "layout">
+    <div class = "layout e_page" >
         <a href = "/encounters/<%= e.id %>"><h1><%= e.name %></h1></a>
         <h3>posted by <a href = '/users/<%= e.user.slug %>'><%= e.user.username %></a> </h3>
         <span><%= e.date %></span>
         <span><%= e.location %> </span>
         <p><%= e.description %></p>
+        <div class="parallax" style = "height: 99px;"></div>
     </div>
 <% end %>

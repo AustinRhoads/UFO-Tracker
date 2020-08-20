@@ -1,41 +1,65 @@
 <!doctype html>
 <head> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
 
 
 
+
+
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/basic.css" />
 
 </head>
 
-<body >
-<header class = "layout">
+<body class = "layout">
+<header >
 
 
-<div class="dropdown">
-  <button id = "blank_box" class="dropbtn"><a  href = '/'><h1>UFO Tracker</h1></a></button>
-  <div class="dropdown-content">
-  <% if logged_in? %>
-  <a id = "blank_box" href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a>
-  <a id = "blank_box" href = "/encounters/new">Report A UFO</a>
-  <a id = "blank_box" href = '/encounters'>Explore UFO Encounters</a>
-  <a id = "blank_box" href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
-  <a id = "blank_box" href = '/logout'>Log Out</a>
-<% else %>
 
-  <a href = '/login'>Log In</a>
-  <a href = '/signup'>Sign Up</a>
-<% end %>
 
-  </div>
-</div>
 
 </header>
 
+<span class = "derp" style = "z-index: 3;">
+ <div class="topnav" id="myTopnav">
+  <a href="/encounters" class="active">UFO Tracker</a>
+  <% if logged_in? %>   
+    <a href = '/encounters'>Explore UFO Encounters</a>
+    <a href = "/encounters/new">Report A UFO</a></li>
+       
+        <div id = "right-side" class="dropdown">
+          <button class="dropbtn"><image class = "user_icon" src = "/images/alien_head_white_1.ico" >
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div  class="dropdown-content">
+            <a href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a>
+            <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
+            <a href = '/logout'>Log Out</a>
+          </div>
+        </div>
+        <a id = "right-side" href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <% else %>
+        <a href = '/login'>Log In</a>
+        <a href = '/signup'>Sign Up</a>
+  <% end %>
+</div>
+
+</span>
 
 
 
@@ -43,8 +67,10 @@
 
 
 
-
+<main>
 <%= yield %>
+
+</main>
 <footer class = "layout">
 <h3>The Truth Is Out There</h3>
 </footer>

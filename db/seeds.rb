@@ -265,3 +265,147 @@ mass_encounters = {
 # case11fm = Encounter.all[1]
 # case11.encounters << case11ds
 # case11.encounters << case11fm
+
+
+
+
+
+
+
+
+# <span class = "navbar_dropdown">
+# <div class="dropdown">
+#       <button ><a id = "blank_box" class="dropbtn" href = '/encounters'><h1>UFO Tracker</h1></a></button>
+#       <div class="dropdown-content">
+#          <% if logged_in? %>
+#          <a id = "blank_box" href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a>
+#          <a id = "blank_box" href = "/encounters/new">Report A UFO</a>
+#          <a id = "blank_box" href = '/encounters'>Explore UFO Encounters</a>
+#          <a id = "blank_box" href = '/users/<%= current_user.slug %>/edit'>edit my page</a>
+#          <a id = "blank_box" href = '/logout'>Log Out</a>
+#        <% else %>
+# 
+#          <a  id = "blank_box" href = '/login'>Log In</a>
+#          <a  id = "blank_box" href = '/signup'>Sign Up</a>
+#        <% end %>
+# 
+#       </div>
+# </div>
+# </span>
+# 
+# <div class = "navbar_horizontal" >
+# <div class="dropdown">
+#    <ul class = "whole_nav">
+#     <li><a style="float:left" class="dropbtn" href = '/encounters'><h1>UFO Tracker</h1></a></li>
+#      
+#         <% if logged_in? %>
+#        <li>  <a href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a></li>
+#        <li>  <a href = "/encounters/new">Report A UFO</a></li>
+#        <li>  <a href = '/encounters'>Explore UFO Encounters</a></li>
+#        <li>  <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a></li>
+#        <li>  <a href = '/logout'>Log Out</a></li>
+#       <% else %>
+# 
+#         <li><a href = '/login'>Log In</a></li>
+#         <li><a href = '/signup'>Sign Up</a></li>
+#       <% end %>
+# 
+#      
+#    </ul>
+# </div>
+# </div>
+
+
+
+
+
+
+
+
+# 
+# @media(min-width: 933px){
+# 
+#     .navbar_dropdown{
+#         visibility: hidden;
+#     }
+# 
+#     .whole_nav{
+#         list-style-type: none;
+#         margin: 0;
+#         padding: 0;
+#         overflow: hidden;
+#         background-color: #333;
+#         width: 100%;
+#     }
+#     
+#     li {
+#         float: right;
+#       }
+# 
+# 
+#       li a {
+#        display: block;
+#         color: white;
+#         text-align: center;
+#         padding: 14px 16px;
+#         text-decoration: none;
+#         background-color: #333;
+#       }
+# 
+#       li a:hover {
+#         background-color: #111;
+#       }
+# 
+# }
+# 
+# @media(max-width: 933px){
+#     .navbar_horizontal{
+#         visibility: hidden;
+#     }
+# 
+#           /* Dropdown Button */
+#         header .dropbtn {
+# 
+#         
+#             color: #111;
+#             padding: 16px;
+#             font-size: 16px;
+#             border: none;
+#           }
+# 
+#           /* The container <div> - needed to position the dropdown content */
+#           .dropdown {
+#             position: relative;
+#             display: inline-block;
+#           }
+# 
+#           /* Dropdown Content (Hidden by Default) */
+#           .dropdown-content {
+#            
+#             display: none;
+#             position: absolute;
+#             background-color: #f1f1f1;
+#             min-width: 160px;
+#             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+#             z-index: 1;
+#           }
+# 
+#           /* Links inside the dropdown */
+#           .dropdown-content a {
+#             color: black;
+#             padding: 12px 16px;
+#             text-decoration: none;
+#             display: block;
+#           }
+# 
+#           /* Change color of dropdown links on hover */
+#           .dropdown-content a:hover {background-color: #ddd;}
+# 
+#           /* Show the dropdown menu on hover */
+#           .dropdown:hover .dropdown-content {display: block;}
+# 
+#           /* Change the background color of the dropdown button when the dropdown content is shown */
+#           .dropdown:hover .dropbtn {
+#         
+#         }
+# }
