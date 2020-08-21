@@ -1,12 +1,41 @@
-<image class = "homepage_image" src = "/images/ufo_tracker_banner_hollow_night_sky.png">
-<div class = "layout">
+<head>
+
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('/images/ufo doncaster.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+</head>
+
+<body >
+
+<div class = "parallax" style="height: 66px;"></div>
+<div  class = "parallax" class = "layout">
    
 <% if !logged_in? %>
 
-<h1>Welcome to the UFO Tracker</h1>
-<p> <a href = '/login'>Log In</a> or 
+<h1 class = "parallax welcome_greeting" >Welcome to the UFO Tracker</h1>
+<p class = "parallax" style = "margin: 0px;"> <a href = '/login'>Log In</a> or 
 <a href = '/signup'>Sign Up</a> to explore or report UFO sightings.</p>
 <% end %>
 
  
-</div>
+</div> 
+
+<div class = "parallax" style = "height: 400px;"></div>
+</body>

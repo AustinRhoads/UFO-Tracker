@@ -1,41 +1,73 @@
-<h1 class = "layout">Create New User</h1>
+<head>
 
-<form class = "layout" action = "/signup" method = "POST">
-<div id = "error">
-<% if flash.has?(:message_0) %>
-    <%= flash[:message_0] %>
-<% end %>
-</div>
+<style>
+body, html {
+  height: 100%;
+}
 
-<br>
+.parallax {
+  /* The image used */
+  background-image: url('/images/ufo_in_forest.jpg');
 
-<label class = "input-box">Name:</label>
-<input type = "text" name = "username" >
-<br>
+  /* Full height */
+  height: 100%; 
+ margin: 0px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 
-<div id = "error">
-<% if flash.has?(:message_1) %>
-    <%= flash[:message_1] %>
-<% end %>
-</div>
-<br>
-<label>Email:</label>
-<input type = "text" name = "email" >
-<br>
-<br>
+</head>
 
-<label>Password:</label>
-<input type = "password" name = "password"><br><br>
-<label>Are you a member of the military?</label><br>
-<input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
-<input type = "radio" name = "is_military" value = "false"><label>no</label></input>
+<body>
+<main style = "padding: 0px;">
+<div class = "parallax" style = "height: 63px;"></div>
+    <h1 class = "layout parallax">Create New User</h1>
+    <div class = "parallax" style = "height: 63px;"></div>
+    <form class = "layout parallax" action = "/signup" method = "POST">
+    <div id = "error">
+    <% if flash.has?(:message_0) %>
+        <%= flash[:message_0] %>
+    <% end %>
+    </div>
 
-<br>
-<label>Are you a member of law inforcment?</label>
-<br>
-<input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
-<input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
-<br>
-<input type = "submit" value = "Sign Up">
+    <br>
 
-</form>
+    <label class = "input-box">Name:</label>
+    <input type = "text" name = "username" >
+    <br>
+
+    <div id = "error">
+    <% if flash.has?(:message_1) %>
+        <%= flash[:message_1] %>
+    <% end %>
+    </div>
+    <br>
+    <label>Email:</label>
+    <input type = "text" name = "email" >
+    <br>
+    <br>
+
+    <label>Password:</label>
+    <input type = "password" name = "password"><br><br>
+    <div class = "parallax" style = "height: 63px;"></div>
+    <label>Are you a member of the military?</label><br>
+    <input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
+    <input type = "radio" name = "is_military" value = "false"><label>no</label></input>
+
+    <br>
+    <label>Are you a member of law inforcment?</label>
+    <br>
+    <input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
+    <input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
+    <br>
+    <input type = "submit" value = "Sign Up">
+
+    </form>
+    <div class = "parallax" style = "height: 63px;"></div>
+    <div class = "parallax" style = "height: 63px;"></div>
+    </main>
+</body>

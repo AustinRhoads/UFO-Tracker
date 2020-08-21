@@ -7,7 +7,7 @@ body{
     padding: 0%;
 }
 main{
-    padding-top: 54px;
+   
 }
 
 .layout{
@@ -328,4 +328,23 @@ height: auto;
 margin-left: 19%;
 
 }
+}
+
+@media screen and (min-width: 773px){
+
+    main{
+      padding-top: 72px;
+  }
+}
+
+
+.welcome_greeting{
+  font-size: 54px;
+ 
+}
+
+.shadow{
+  align-content: center;
+    background-color: rgb(43, 42, 42);
+   
 }
