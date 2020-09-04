@@ -9,7 +9,7 @@ run
 
 run
 
-```bundle```
+```bundle install```
 
 
 run 
