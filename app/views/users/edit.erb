@@ -1,25 +1,58 @@
-<h1>Update My Profile</h1>
+<style>
+body, html {
+  height: 100%;
+}
 
-<form action = "/users/<%= @user.slug %>" method = "POST">
+.parallax {
+  /* The image used */
+  background-image: url('/images/ufo_how_to_diagram.jpg');
 
-<input type = "hidden" id = "hidden" name = "_method" value = "patch">
+  /* Full height */
+  height: 100%; 
 
-<label>Name:</label>
-<input type = "text" name = "username" value = "<%= @user.username %>"><br>
-<label>Email:</label>
-<input type = "text" name = "email" value = "<%= @user.email %>"><br>
-<label>Password:</label>
-<input type = "password" name = "password" value = "<%= @user.password %>"><br>
-<label>Are you a member of the military?</label><br>
-<input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
-<input type = "radio" name = "is_military" value = "false"><label>no</label></input>
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 
-<br>
-<label>Are you a member of law inforcment?</label>
-<br>
-<input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
-<input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
-<br>
-<input type = "submit" value = "Update Profile">
+<div class = "parallax" style = "height: 33px;"></div>
 
-</form>
+<div class = "parallax">
+    <h1 class = "e_page">Update My Profile</h1>
+</div>
+
+<div class = "parallax" style = "height: 33px;"></div>
+
+<div class = "parallax">
+    <form class = "e_page" action = "/users/<%= @user.slug %>" method = "POST">
+
+    <input type = "hidden" id = "hidden" name = "_method" value = "patch">
+
+    <label>Name:</label>
+    <input type = "text" name = "username" value = "<%= @user.username %>"><br>
+    <br>
+    <label>Email:</label>
+    <input type = "text" name = "email" value = "<%= @user.email %>"><br>
+    <br>
+    <label>Password:</label>
+    <input type = "password" name = "password" value = "<%= @user.password %>"><br>
+    <br>
+    <label>Are you a member of the military?</label><br>
+    <input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
+    <input type = "radio" name = "is_military" value = "false"><label>no</label></input>
+    <br>
+    <br>
+    <label>Are you a member of law inforcment?</label>
+    <br>
+    <input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
+    <input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
+    <br>
+    <br>
+    <input type = "submit" value = "Update Profile">
+
+    </form>
+</div>
+<div class = "parallax" style = "height: 450px;"></div>

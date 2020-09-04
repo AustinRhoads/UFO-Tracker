@@ -38,13 +38,39 @@ $(document).on('change', '#'+searchInput, function () {
     document.getElementById('longitude_view').innerHTML = ''; 
 });
 </script>
+
+
+
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('/images/the_night_sky_1.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
 </head>
 
 
+<div class = "parallax" style = "height: 33px;"></div>
+<div class = "parallax">
 
+<h1 class = "layout e_top">Report An Encounter</h1>
 
+</div>
 
-<h1 class = "layout">Report An Encounter</h1>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBymQk6keNx_H7Pk1awWHv6M4UUt_9waGY"></script>
 
@@ -52,69 +78,70 @@ $(document).on('change', '#'+searchInput, function () {
 
 
 
+<div class = "parallax">
 
+    <form class = "layout e_page" action = "/encounters" method = "POST">
+    <div >
+    <label>Encounter Name: </label>
+    <input  type ="text" name = "name" >
+    </div>
+    <br>
+    <div >
+    <label>Date: </label>
+    <input  type = "text" name = "date">
+    </div>
+    <br>
 
-<form class = "layout" action = "/encounters" method = "POST">
-<div >
-<label>Encounter Name: </label>
-<input  type ="text" name = "name" >
-</div>
-<br>
-<div >
-<label>Date: </label>
-<input  type = "text" name = "date">
-</div>
-<br>
+    <div class = "container">
 
-<div class = "container">
+    <!-- Autocomplete location search input --> 
+    <div class="form-group">
+        <label>Location:</label>
+        <input type="text" class="form-control" id="search_input" name = "location" placeholder="Type address..." />
+        <input type="hidden" name = "latitude" id="loc_lat" />
+        <input type="hidden" name = "longitude" id="loc_long" />
+    </div>
 
-<!-- Autocomplete location search input --> 
-<div class="form-group">
-    <label>Location:</label>
-    <input type="text" class="form-control" id="search_input" name = "location" placeholder="Type address..." />
-    <input type="hidden" name = "latitude" id="loc_lat" />
-    <input type="hidden" name = "longitude" id="loc_long" />
-</div>
-
-<!-- Display latitude and longitude -->
-<div class="latlong-view">
-    <p><b>Latitude:</b> <span id="latitude_view" ></span></p>        <!-- <input type = "text" id ='latitude_input'>  -->
-  
-
-    <p><b>Longitude:</b> <span id="longitude_view" ></span></p>                         <!-- <input type = "text" id ='longitude_input'> -->
-</div>
+    <!-- Display latitude and longitude -->
+    <div class="latlong-view">
+        <p><b>Latitude:</b> <span id="latitude_view" ></span></p>        <!-- <input type = "text" id ='latitude_input'>  -->
     
+
+        <p><b>Longitude:</b> <span id="longitude_view" ></span></p>                         <!-- <input type = "text" id ='longitude_input'> -->
+    </div>
+
+    </div>
+
+    <div >
+    <label>Description: </label>
+    <input  type = "text" name = "description">
+    </div>
+    <br>
+   
+    <label>Was the Military Involved?</label>
+    <br>
+    <input type = "radio" name = "military_involved" value = "true">Yes</input><br>
+    <input type = "radio" name = "military_involved" value = "false">No</input><br>
+
+    <label>Was Law Enforcement Involved?</label>
+    <br>
+    <input type = "radio" name = "law_enforcement_involved" value = "true">Yes</input><br>
+    <input type = "radio" name = "law_enforcement_involved" value = "false">No</input><br>
+
+    <label>Did this happen to you??</label>
+    <br>
+    <input type = "radio" name = "happen_to_user" value = "true">Yes</input><br>
+    <input type = "radio" name = "happen_to_user" value = "false">No</input><br>
+
+    <label>This as a Close Encounter of the...</label><br>
+    <input type ="radio" name = "kind">First Kind<p>Visual sightings of an unidentified flying object, seemingly less than 500 feet (150 m) away, that show an appreciable angular extension and considerable detail</p></input><br>
+    <input type ="radio" name = "kind">Second Kind<p>A UFO event in which a physical effect is alleged; this can be interference in the functioning of a vehicle or electronic device, animals reacting, a physiological effect such as paralysis or heat and discomfort in the witness, or some physical trace like impressions in the ground, scorched or otherwise affected vegetation, or a chemical trace[</p></input><br>
+    <input type ="radio" name = "kind">Third Kind<p>UFO encounters in which an animated entity is present—these include humanoids, robots, and humans who seem to be occupants or pilots of a UFO</p></input><br>
+    <input type ="radio" name = "kind">Fourth Kind<p>A Close Encounter of the Fourth Kind is a UFO event in which a human is abducted by a UFO or its occupants.</p></input><br>
+    <input type ="radio" name = "kind">Fifth Kind<p>A Close Encounter of the Fifth Kind is a UFO event that involves direct communication between aliens and humans.</p></input><br>
+    <input type ="radio" name = "kind">Sixth Kind<p>Death of a human or animal associated with a UFO sighting (though this could be considered a more severe example of a second-kind encounter)[</p></input><br>
+    <input type ="radio" name = "kind">Seventh Kind<p>The creation of a human/alien hybrid, either by sexual reproduction or by artificial scientific methods</p></input><br>
+
+    <input type = "Submit" value = "SUBMIT">
+    </form>
 </div>
-
-<div >
-<label>Description: </label>
-<input  type = "text" name = "description">
-</div>
-<br>
-
-<label>Was the Military Involved?</label>
-<br>
-<input type = "radio" name = "military_involved" value = "true">Yes</input><br>
-<input type = "radio" name = "military_involved" value = "false">No</input><br>
-
-<label>Was Law Enforcement Involved?</label>
-<br>
-<input type = "radio" name = "law_enforcement_involved" value = "true">Yes</input><br>
-<input type = "radio" name = "law_enforcement_involved" value = "false">No</input><br>
-
-<label>Did this happen to you??</label>
-<br>
-<input type = "radio" name = "happen_to_user" value = "true">Yes</input><br>
-<input type = "radio" name = "happen_to_user" value = "false">No</input><br>
-
-<label>This as a Close Encounter of the...</label><br>
-<input type ="radio" name = "kind">First Kind<p>Visual sightings of an unidentified flying object, seemingly less than 500 feet (150 m) away, that show an appreciable angular extension and considerable detail</p></input><br>
-<input type ="radio" name = "kind">Second Kind<p>A UFO event in which a physical effect is alleged; this can be interference in the functioning of a vehicle or electronic device, animals reacting, a physiological effect such as paralysis or heat and discomfort in the witness, or some physical trace like impressions in the ground, scorched or otherwise affected vegetation, or a chemical trace[</p></input><br>
-<input type ="radio" name = "kind">Third Kind<p>UFO encounters in which an animated entity is present—these include humanoids, robots, and humans who seem to be occupants or pilots of a UFO</p></input><br>
-<input type ="radio" name = "kind">Fourth Kind<p>A Close Encounter of the Fourth Kind is a UFO event in which a human is abducted by a UFO or its occupants.</p></input><br>
-<input type ="radio" name = "kind">Fifth Kind<p>A Close Encounter of the Fifth Kind is a UFO event that involves direct communication between aliens and humans.</p></input><br>
-<input type ="radio" name = "kind">Sixth Kind<p>Death of a human or animal associated with a UFO sighting (though this could be considered a more severe example of a second-kind encounter)[</p></input><br>
-<input type ="radio" name = "kind">Seventh Kind<p>The creation of a human/alien hybrid, either by sexual reproduction or by artificial scientific methods</p></input><br>
-
-<input type = "Submit" value = "SUBMIT">
-</form>

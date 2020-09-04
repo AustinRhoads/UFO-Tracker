@@ -11,6 +11,8 @@ module Slugifiable
             else
                 self.ci_find('name', name)
             end
+
+
            #binding.pry
            # self.find_by(name: name)
            #self.ci_find('name', name)
@@ -22,7 +24,9 @@ module Slugifiable
 
     module InstanceMethods
         def slug
+
             #self.name.downcase.gsub(/\s/, "-")
+            
             if self.class == User
                 self.username.downcase.gsub(/\s/, "-")
             else

@@ -116,17 +116,10 @@ header, footer{
 transform: translateX(6px);
 }
 
-.encounters_index_body{
-  
-    
-}
-.e_top_box{
-    
-  
-}
-
-.image_container{
-
+.file{
+  background-image: url('/images/ufo_blank_box.jpg');
+  background-size: cover;
+  padding-bottom: 15px;
 }
 
 .map_container{
@@ -138,6 +131,8 @@ transform: translateX(6px);
     width: 100%;
     height: auto;
 }
+
+
 
 
 
@@ -290,6 +285,11 @@ transform: translateX(6px);
   }
 
 
+
+  .parallax .homepage_image{
+    padding-left: 5%;
+  }
+
 .e_page{
   width: 61.8%;
   height: auto;
@@ -297,7 +297,22 @@ transform: translateX(6px);
     color: #f2f2f2;
     background-color: #333;
     opacity: 88%;
+
 }
+
+
+.e_top{
+  width: 61.8%;
+  height: auto;
+  margin: auto;
+    color: #f2f2f2;
+    background-color: #333;
+    opacity: 88%;
+ 
+}
+
+
+ 
 h1{
     margin: 0px;
 }
@@ -326,8 +341,15 @@ h1{
 width: 61.8%;
 height: auto;
 margin-left: 19%;
+padding-left: 0%;
 
 }
+.extra{
+  height: 72px;
+}
+   main{
+      padding-top: 81px;
+  }
 }
 
 @media screen and (min-width: 773px){
@@ -335,6 +357,13 @@ margin-left: 19%;
     main{
       padding-top: 72px;
   }
+
+  main .homepage_image{
+
+    padding-left: 5%;
+    
+    }
+
 }
 
 
@@ -348,3 +377,9 @@ margin-left: 19%;
     background-color: rgb(43, 42, 42);
    
 }
+
+.homepage_image{
+
+  padding-left: 5%;
+  
+  }

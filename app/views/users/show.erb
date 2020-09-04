@@ -1,16 +1,47 @@
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('/images/ufo_diagram_1.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 
 
-<div class = "layout" >
 
-<h1><%= @user.username %></h1> 
+<div class = "parallax" style = "height: 33px;"></div>
+<div class = "parallax">
+    <div class = "layout e_page" >
 
-<h3><%= @user.encounters.count %> cases</h3>
-<a href = "/encounters/new">Report an Encounter</a>
+        <h1><%= @user.username %></h1> 
+        <a href = "/users/<%= @user.slug %>/edit">Edit My Profile</a>
+        <h3><%= @user.encounters.count %> cases</h3>
+        <a href = "/encounters/new">Report an Encounter</a>
+    </div>
+</div>
+<div class = "parallax" style = "height: 45px;"></div>
+
+<div class = "parallax">
+
+    <% @user.encounters.each do |encounter| %>
+        <div class = "e_page">
+            <h2 style = "margin: 0px;" ><a href = "/encounters/<%= encounter.id %>"><%= encounter.name %></a></h2>
+            <p><%= encounter.description %></p>
+            <a href = "/encounters/<%= encounter.id %>/edit"><p>Edit</p></a>
+        </div>
+    <% end %>
 </div>
 
+<div class = "parallax" style = "height: 600px;"></div>
 
-<% @user.encounters.each do |encounter| %>
-<h2><a href = "/encounters/<%= encounter.id %>"><%= encounter.name %></a></h2>
-<p><%= encounter.description %></p>
-<a href = "/encounters/<%= encounter.id %>/edit"><p>Edit</p></a>
-<% end %>
