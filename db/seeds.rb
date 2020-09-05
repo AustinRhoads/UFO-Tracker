@@ -298,17 +298,17 @@ mass_encounters = {
 #    <ul class = "whole_nav">
 #     <li><a style="float:left" class="dropbtn" href = '/encounters'><h1>UFO Tracker</h1></a></li>
 #      
-#         <% if logged_in? %>
-#        <li>  <a href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a></li>
-#        <li>  <a href = "/encounters/new">Report A UFO</a></li>
-#        <li>  <a href = '/encounters'>Explore UFO Encounters</a></li>
-#        <li>  <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a></li>
-#        <li>  <a href = '/logout'>Log Out</a></li>
-#       <% else %>
-# 
-#         <li><a href = '/login'>Log In</a></li>
-#         <li><a href = '/signup'>Sign Up</a></li>
-#       <% end %>
+#                 <% if logged_in? %>
+#                <li>  <a href = '/users/<%= current_user.slug %>'><%= current_user.username %>'s Profile</a></li>
+#                <li>  <a href = "/encounters/new">Report A UFO</a></li>
+#                <li>  <a href = '/encounters'>Explore UFO Encounters</a></li>
+#                <li>  <a href = '/users/<%= current_user.slug %>/edit'>edit my page</a></li>
+#                <li>  <a href = '/logout'>Log Out</a></li>
+#               <% else %>                           
+#         
+#                 <li><a href = '/login'>Log In</a></li>
+#                 <li><a href = '/signup'>Sign Up</a></li>
+#               <% end %>              
 # 
 #      
 #    </ul>
