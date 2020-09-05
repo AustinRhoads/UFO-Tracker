@@ -24,10 +24,16 @@ class EncountersController < ApplicationController
         proc = Proc.new {
 
         @encounter = Encounter.new(params)
-        @user = current_user
-        @user.encounters << @encounter
-        @encounter.save
-        redirect "/encounters/#{@encounter.id}"
+        
+            @user = current_user
+            @user.encounters << @encounter
+            if @encounter.save
+        
+                redirect "/encounters/#{@encounter.id}"
+            else
+                redirect "/encounters/new"
+            end
+     
 
     }
         redirect_if_not_logged_in(proc)
