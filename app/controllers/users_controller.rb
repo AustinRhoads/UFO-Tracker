@@ -25,8 +25,10 @@ class UsersController < ApplicationController
         @user = User.new(params)
           if @user.save
             
-              session[:user_id] = @user.id
-              redirect "/users/#{@user.slug}"
+              #session[:user_id] = @user.id
+             # redirect "/users/#{@user.slug}"
+
+             redirect "/login"
           else
 
            messages = validate_signup(params)
@@ -61,7 +63,7 @@ class UsersController < ApplicationController
  
      get '/logout' do
          session.clear
-         redirect "/login"
+         redirect "/"
      end
 
      get '/users/:slug/edit' do
@@ -89,7 +91,7 @@ class UsersController < ApplicationController
         messages = []
 
         params.each do |key, value|
-            next if key == "password"
+            next if key == "password" || key == "is_military" || key == "is_law_enforcement"
            
             finder = User.find_by("#{key}" => value)
             if finder
