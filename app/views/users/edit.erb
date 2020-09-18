@@ -39,16 +39,16 @@ body, html {
     <br>
     <label>Password:</label>
     <input type = "password" name = "password" value = "<%= @user.password %>"><br>
-    <br>
+    <br> 
     <label>Are you a member of the military?</label><br>
-    <input type = "radio" name = "is_military" value = "true"><label>yes</label></input>
-    <input type = "radio" name = "is_military" value = "false"><label>no</label></input>
+    <input type = "radio" name = "is_military" value = "true" <%='checked' if @user.is_military == true %>><label>yes</label></input>
+    <input type = "radio" name = "is_military" value = "false" <%='checked' if @user.is_military == false %>><label>no</label></input>
     <br>
     <br>
     <label>Are you a member of law inforcment?</label>
     <br>
-    <input type = "radio" name = "is_law_enforcement" value = "true"><label>yes</label></input>
-    <input type = "radio" name = "is_law_enforcement" value = "false"><label>no</label></input>
+    <input type = "radio" name = "is_law_enforcement" value = "true" <%='checked' if @user.is_law_enforcement == true %>><label>yes</label></input>
+    <input type = "radio" name = "is_law_enforcement" value = "false" <%='checked' if @user.is_law_enforcement == false %>><label>no</label></input>
     <br>
     <br>
     <input type = "submit" value = "Update Profile">

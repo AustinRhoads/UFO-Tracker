@@ -1,2 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.parallax {
+    /* The image used */
+    background-image: url('/images/nasa_galaxy_cluster.jpg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  </style>
+  </head>
+<body>
 <h1>I Want To Believe</h1>
-<h2>this is users index</h2>
+
+<% @users.each do |user| %>
+
+
+
+
+<% end %>
+
+<div class="parallax" style = "height: 99px;"></div>
+
+
+<div class = "parallax">
+<% @users.each do |user| %>
+    <div class = "layout e_page" >
+        <a href = "/users/<%= user.slug %>"><h1><%= user.username %></h1></a>
+       
+        <span>Number of Reoptrs: <%= user.encounters.count %></span>
+    
+        <div class="parallax" style = "height: 99px;"></div>
+    </div>
+<% end %>
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
