@@ -27,9 +27,13 @@ body, html {
         <h1><%= @user.username %></h1> 
         <% if current_user == @user %>
             <a href = "/users/<%= @user.slug %>/edit">Edit My Profile</a>
+            <h3>My Email: <%= @user.email %></h3>
+            <h3><%= @user.encounters.count %> cases</h3>
+            <a href = "/encounters/new">Report an Encounter</a>
+        <% else %>
+             <h3><%= @user.encounters.count %> cases</h3>
         <% end %>
-        <h3><%= @user.encounters.count %> cases</h3>
-        <a href = "/encounters/new">Report an Encounter</a>
+   
     </div>
 </div>
 <div class = "parallax" style = "height: 45px;"></div>
