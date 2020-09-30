@@ -52,7 +52,8 @@ encounters = {
     :country => "United States",
     :description => "Several UFO sightings reported after the sighting of Kenneth Arnold.",
      :latitude => 47.7510741,
-    :longitude => -120.7401385
+    :longitude => -120.7401385,
+    :kind => 1
 },
 
 "Roswell UFO crash" => {
@@ -62,7 +63,8 @@ encounters = {
     :country => "United States",
     :description => "States	United States Army Air Forces allegedly captured a crashed flying saucer and its alien occupants. The find was soon revealed to be a crashed balloon but regained attention since 1978 after investigation of S. T. Friedman.",
      :latitude => 33.3942655,
-    :longitude => -104.5230242
+    :longitude => -104.5230242,
+    :kind => 1
 },
 
 "The Green Fireballs" => {
@@ -72,7 +74,8 @@ encounters = {
     :country => "United States",
     :description => "Objects were reported over several United States military bases; an official investigation followed.",
      :latitude => "",
-    :longitude => ""
+    :longitude => "",
+    :kind => 1
 },
 
 "Thomas Mantell" => {
@@ -82,7 +85,8 @@ encounters = {
     :country => "United States",
     :description => "US Air Force sent a fighter pilot to investigate a UFO sighting over Fort Knox, Kentucky; his aircraft crashed and the pilot was killed while pursuing the UFO.",
      :latitude => 37.8393332,
-    :longitude => -84.2700179
+    :longitude => -84.2700179,
+    :kind => 1
 },
 
 "Aztec, New Mexico, UFO incident" => {
@@ -92,7 +96,8 @@ encounters = {
     :country => "	United States",
     :description => "An alleged retrieval of a grounded UFO and its occupants from a plateau in New Mexico.",
      :latitude => 34.5199402,
-    :longitude => -105.8700901
+    :longitude => -105.8700901,
+    :kind => 1
 },
 
 "Chiles-Whitted UFO encounter" => {
@@ -102,7 +107,8 @@ encounters = {
     :country => "	United States",
     :description => "Chiles and Whitted, American commercial pilots, reported that their airplane had nearly collided with a UFO.",
      :latitude => 32.3182314,
-    :longitude => -86.902298
+    :longitude => -86.902298,
+    :kind => 1
 },
 
 "Gorman dogfight" => {
@@ -112,7 +118,8 @@ encounters = {
     :country => "United States",
     :description => "A US Air Force pilot sighted and pursued a UFO for 27 minutes over Fargo, North Dakota.",
      :latitude => 47.55149259999999,
-    :longitude => -101.0020119
+    :longitude => -101.0020119,
+    :kind => 1
 },
 
 "McMinnville UFO photograph" => {
@@ -122,7 +129,8 @@ encounters = {
     :country => "United States",
     :description => "A farmer took pictures of a purported flying saucer. These were the first claimed photographs of flying saucers since the coining of the term.",
      :latitude => 45.21011619999999,
-    :longitude => -123.1987163
+    :longitude => -123.1987163,
+    :kind => 1
 },
 
 "Mariana UFO incident" => {
@@ -132,7 +140,8 @@ encounters = {
     :country => "United States",
     :description => "The manager of Great Falls' pro baseball team took color film of two UFOs flying over Great Falls. The film was extensively analyzed by the US Air Force and several independent investigators.",
      :latitude => 47.5052849,
-    :longitude => -111.3007715
+    :longitude => -111.3007715,
+    :kind => 1
 },
 
 "Lubbock Lights" => {
@@ -142,7 +151,8 @@ encounters = {
     :country => "United States",
     :description => "Several Lights in V-Shaped formations were repeatedly spotted flying over the city. Witnesses included professors from Texas Tech University and photographed by a Texas Tech student.",
      :latitude => 33.5778631,
-    :longitude => -101.8551665
+    :longitude => -101.8551665,
+    :kind => 1
 }
 
 }

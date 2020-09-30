@@ -90,6 +90,9 @@ for(let x = 0; x < arr.length; x++){
         <span><%= e.date %></span>
         <span><%= e.location %> </span>
         <p><%= e.description %></p>
+        <% if e.kind %>
+          <h3>This was a close encounter of the <%= e.kind_ordinalize %> kind.</h3>
+        <% end %>
         <div class="parallax" style = "height: 99px;"></div>
     </div>
 <% end %>
