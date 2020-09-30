@@ -44,7 +44,9 @@ body, html {
         <div class = "e_page">
             <h2 style = "margin: 0px;" ><a href = "/encounters/<%= encounter.id %>"><%= encounter.name %></a></h2>
             <p><%= encounter.description %></p>
+            <% if current_user == @user %>
             <a href = "/encounters/<%= encounter.id %>/edit"><p>Edit</p></a>
+            <% end %>
         </div>
     <% end %>
 </div>
